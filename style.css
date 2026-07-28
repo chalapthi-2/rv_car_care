@@ -26,7 +26,7 @@ body {
 
 /* Utilities */
 .container {
-    max-width: 1000px; /* Narrower for landing page focus */
+    max-width: 1000px; 
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -66,7 +66,7 @@ p { font-weight: 300; line-height: 1.6; color: var(--text-secondary); }
     width: 100%;
 }
 
-/* Header */
+/* Header & Nav */
 .header {
     background: var(--bg-main);
     padding: 15px 5%;
@@ -74,9 +74,6 @@ p { font-weight: 300; line-height: 1.6; color: var(--text-secondary); }
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 .logo {
     font-size: 1.2rem;
@@ -93,17 +90,41 @@ p { font-weight: 300; line-height: 1.6; color: var(--text-secondary); }
     border-radius: 20px;
     border: 1px solid var(--glass-border);
 }
+.nav-bar {
+    background: var(--bg-secondary);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+}
+.nav-bar a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+.nav-bar a:hover {
+    color: var(--accent);
+}
 
 /* Offer Banner */
 .offer-banner {
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
     background: radial-gradient(circle at center, var(--bg-secondary) 0%, var(--bg-main) 100%);
     border-bottom: 1px solid rgba(255, 215, 0, 0.2);
 }
 .banner-content {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 30px;
 }
 .offer-banner h1 {
     font-size: 2.5rem;
@@ -143,56 +164,149 @@ p { font-weight: 300; line-height: 1.6; color: var(--text-secondary); }
     color: var(--text-primary);
 }
 
-/* Details Section */
-.details-section {
+.combo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.combo-item {
+    background: var(--bg-main);
+    border: 1px solid var(--glass-border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.combo-item img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+.combo-item h4 {
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Services Menu */
+.services-menu {
     padding: 60px 0;
 }
 .section-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 40px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
-.service-card {
-    display: flex;
+.pricing-table {
     background: var(--bg-secondary);
-    border-radius: 20px;
-    overflow: hidden;
-    margin-bottom: 30px;
+    border-radius: 15px;
+    padding: 20px;
     border: 1px solid var(--glass-border);
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
-.service-card.reverse {
-    flex-direction: row-reverse;
-}
-.service-img {
-    width: 40%;
-    position: relative;
-}
-.service-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-.service-info {
-    width: 60%;
-    padding: 40px;
+.pricing-row {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
 }
-.service-info h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+.pricing-row:last-child {
+    border-bottom: none;
+}
+.service-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.service-name i {
+    width: 20px;
+    text-align: center;
+}
+.service-price {
+    font-size: 1.2rem;
+    font-weight: 800;
     color: var(--accent);
 }
-.service-info p {
+
+/* Wash Packages */
+.wash-packages {
+    padding: 40px 0 80px 0;
+}
+.wash-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+.wash-card {
+    background: var(--bg-secondary);
+    border-radius: 15px;
+    border: 1px solid var(--glass-border);
+    overflow: hidden;
+}
+.wash-header {
+    background: var(--bg-main);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--accent);
+}
+.wash-header i {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+.wash-header h3 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.wash-pricing {
+    padding: 20px;
+}
+.wash-tier {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.wash-tier:last-child {
+    border-bottom: none;
+}
+.tier-name {
+    font-weight: 600;
+}
+.tier-price {
+    font-weight: 800;
+}
+.highlight-tier {
+    background: rgba(255, 215, 0, 0.05);
+    border-radius: 5px;
+}
+.wash-descriptions {
+    background: var(--bg-secondary);
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid var(--glass-border);
+}
+.desc-box {
+    margin-bottom: 20px;
+}
+.desc-box:last-child {
+    margin-bottom: 0;
+}
+.desc-box h4 {
+    margin-bottom: 5px;
     font-size: 1.1rem;
 }
 
 /* Visit Section */
 .visit-section {
-    padding: 40px 0 20px 0;
+    padding: 0 0 60px 0;
     text-align: center;
 }
 .visit-section h2 {
@@ -261,18 +375,30 @@ p { font-weight: 300; line-height: 1.6; color: var(--text-secondary); }
     .price {
         font-size: 3.5rem;
     }
-    .service-card, .service-card.reverse {
+    .combo-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .wash-grid {
+        grid-template-columns: 1fr;
+    }
+    .pricing-row {
         flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
     }
-    .service-img {
-        width: 100%;
-        height: 250px;
+    .service-price {
+        padding-left: 35px;
     }
-    .service-info {
-        width: 100%;
-        padding: 30px 20px;
+    .nav-bar a {
+        font-size: 0.8rem;
     }
-    .service-info h3 {
-        font-size: 1.5rem;
+}
+@media screen and (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-bar {
+        gap: 10px;
     }
 }
