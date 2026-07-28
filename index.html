@@ -6,10 +6,10 @@
     <title>RV Car Care Studio | Premium Detailing & Washing</title>
     <meta name="description" content="Premium car wash, detailing, ceramic coating, and exclusive combo offers at RV Car Care Studio in Tadepalle.">
     
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Cinzel for Luxury Headers, Inter for Body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,10 +18,14 @@
 </head>
 <body>
 
+    <!-- Animated Background Elements -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
     <!-- Header Navigation -->
     <header class="header">
         <div class="logo">
-            <span class="highlight">RV</span> Car Care Studio
+            <span class="gold-gradient">RV</span> Car Care Studio
         </div>
         <div class="header-contact">
             <a href="tel:+917794969444"><i class="fa-solid fa-phone"></i> 7794969444</a>
@@ -38,29 +42,31 @@
     <!-- Main Banner / Combo Offer -->
     <section id="combo" class="offer-banner reveal">
         <div class="banner-content">
-            <h1>Exclusive Rejuvenation Package</h1>
+            <h1 class="gold-gradient">Exclusive Rejuvenation Package</h1>
             <p class="subtitle">Valid ONLY for 5-Seater Vehicles</p>
             <div class="price">
                 <span class="currency">₹</span>5999<span class="only">/-</span>
             </div>
-            <p class="premium-note"><i class="fa-solid fa-flask text-highlight"></i> We use only premium branded chemicals for all our services to ensure the best care for your vehicle.</p>
+            <div class="premium-note-wrapper">
+                <p class="premium-note"><i class="fa-solid fa-flask text-highlight"></i> We use only premium imported branded chemicals to ensure the absolute best care for your vehicle.</p>
+            </div>
         </div>
         
         <div class="combo-grid">
-            <div class="combo-item">
-                <img src="assets/deep_interior.png" alt="Deep Interior Cleaning">
+            <div class="combo-item glass-card">
+                <div class="img-wrapper"><img src="assets/deep_interior.png" alt="Deep Interior Cleaning"></div>
                 <h4>Deep Interior Cleaning</h4>
             </div>
-            <div class="combo-item">
-                <img src="assets/teflon_coating.png" alt="Teflon Coating">
+            <div class="combo-item glass-card">
+                <div class="img-wrapper"><img src="assets/teflon_coating.png" alt="Teflon Coating"></div>
                 <h4>Teflon Coating</h4>
             </div>
-            <div class="combo-item">
-                <img src="assets/rain_glass.png" alt="Glass Rain Repellent">
+            <div class="combo-item glass-card">
+                <div class="img-wrapper"><img src="assets/rain_glass.png" alt="Glass Rain Repellent"></div>
                 <h4>Glass Rain Repellent</h4>
             </div>
-            <div class="combo-item">
-                <img src="assets/ac_vents.png" alt="AC Vents Foam Cleaning">
+            <div class="combo-item glass-card">
+                <div class="img-wrapper"><img src="assets/ac_vents.png" alt="AC Vents Foam Cleaning"></div>
                 <h4>AC Vents Foam Cleaning</h4>
             </div>
         </div>
@@ -69,9 +75,9 @@
     <!-- Full Services Menu -->
     <section id="services" class="services-menu reveal">
         <div class="container">
-            <h2 class="section-title">Premium Services</h2>
+            <h2 class="section-title gold-gradient">Premium Services</h2>
             
-            <div class="pricing-table">
+            <div class="pricing-table glass-card">
                 <div class="pricing-row">
                     <div class="service-name"><i class="fa-regular fa-gem text-highlight"></i> CERAMIC COATING</div>
                     <div class="service-price">15999/-</div>
@@ -119,14 +125,14 @@
     <!-- Wash Packages -->
     <section id="washes" class="wash-packages reveal">
         <div class="container">
-            <h2 class="section-title">Wash Packages</h2>
+            <h2 class="section-title gold-gradient">Wash Packages</h2>
             
             <div class="wash-grid">
                 <!-- Hatchback / Sedan -->
-                <div class="wash-card">
+                <div class="wash-card glass-card">
                     <div class="wash-header">
                         <i class="fa-solid fa-car-side"></i>
-                        <h3>HATCHBACK / SEDAN</h3>
+                        <h3 class="gold-gradient">HATCHBACK / SEDAN</h3>
                     </div>
                     <div class="wash-pricing">
                         <div class="wash-tier">
@@ -141,10 +147,10 @@
                 </div>
 
                 <!-- SUV / 7 Seater -->
-                <div class="wash-card">
+                <div class="wash-card glass-card">
                     <div class="wash-header">
                         <i class="fa-solid fa-truck-pickup"></i>
-                        <h3>SUV / 7 SEATER</h3>
+                        <h3 class="gold-gradient">SUV / 7 SEATER</h3>
                     </div>
                     <div class="wash-pricing">
                         <div class="wash-tier">
@@ -159,37 +165,52 @@
                 </div>
             </div>
 
-            <div class="wash-descriptions">
+            <div class="wash-descriptions glass-card">
                 <div class="desc-box">
-                    <h4 class="text-highlight">BODY WASH:</h4>
+                    <h4 class="gold-gradient">BODY WASH:</h4>
                     <p>FOAM WASH, INTERIOR VACUUMING, CAR FRAGRANCE</p>
                 </div>
                 <div class="desc-box">
-                    <h4 class="text-highlight">FULL BODY WASH:</h4>
+                    <h4 class="gold-gradient">FULL BODY WASH:</h4>
                     <p>BODY & UNDER BODY WASH, INTERIOR VACUUMING, MATS CLEANING, DASH BOARD & TYRE POLISHING, GLASS CLEANING, WIND SHIELD WATER FILLING, CAR FRAGRANCE</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Visit Us -->
+    <!-- Visit Us & Map -->
     <section class="visit-section reveal">
         <div class="container">
-            <h2>Visit RV Car Care Studio</h2>
-            <div class="contact-box">
-                <div class="contact-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                        <h4>Location</h4>
-                        <p>Prathuru Road, beside Aparna Apartments,<br>Tadepalle, Kunchanapalli, Andhra Pradesh 522501</p>
+            <h2 class="section-title gold-gradient">Visit RV Car Care Studio</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-box glass-card">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Prathuru Road, beside Aparna Apartments,<br>Tadepalle, Kunchanapalli, Andhra Pradesh 522501</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+917794969444">7794969444</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <div>
+                            <h4>Follow Us</h4>
+                            <p><a href="https://www.instagram.com/rvcarcarestudio/" target="_blank">@rvcarcarestudio</a></p>
+                        </div>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fa-brands fa-instagram"></i>
-                    <div>
-                        <h4>Follow Us</h4>
-                        <p><a href="https://www.instagram.com/rvcarcarestudio/" target="_blank">@rvcarcarestudio</a></p>
-                    </div>
+
+                <div class="map-container glass-card">
+                    <!-- Google Map iframe for Tadepalle -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122247.90467551061!2d80.52309854746813!3d16.44499119616782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35f0a2a07395c9%3A0x8e833486b77af56b!2sTadepalle%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
